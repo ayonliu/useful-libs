@@ -17,9 +17,9 @@ const puppeteer = require('puppeteer');
     await page.waitFor('#ap_email');
     await page.waitFor('#ap_password');
     await page.waitFor("#signInSubmit")
-	// your login email here
+    // your login email here
     await page.type("#ap_email", '', {delay: 100});
-	// you password here
+    // you password here
     await page.type("#ap_password", '', {delay: 100});
     await page.click("#signInSubmit", {
         delay: 300
@@ -30,5 +30,5 @@ const puppeteer = require('puppeteer');
 
     await page.screenshot({path: 'amazon.png'});
 
-    // await brwoser.close();
+    await brwoser.close();
 })();
